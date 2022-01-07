@@ -1,0 +1,89 @@
+
+<style type="text/css">
+    body{
+        padding: 0;
+        margin: 0;
+      
+    }
+    button{
+        width: 100px;
+        height: 75px;
+        background: antiquewhite;
+        font-size: 30px;
+        font-style: italic;
+        
+    }
+    .content{
+        position: relative;
+        left: 33%;
+        text-align: center;
+        border: 10px solid black;
+        width: 400px;
+        border-radius: 20px;
+
+    }
+    .all-content{
+        text-align: center;
+    }
+  
+    input[type=text]{
+        width: 392px;
+        height: 50px;
+        margin-bottom: 2px;
+        font-size: 40px;
+        text-align: right;
+        background-color: ghostwhite;
+    }
+    .btnresult{
+        width: 300px;
+        background-color: aquamarine;
+    }
+    
+</style>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+    
+   <div class="all-content">
+    <h1>Angular Calculator</h1>
+    <div class="content">
+    <input type="text" value="{{input}}" value="{{result}}">     
+    <br>
+   
+      
+      <button class="numbutton" type="button" (click)="pressNum('0')">0</button>
+      <button class="btnall" type="button" (click)="allClear()">C</button>
+      <button class="btnclear " type="button" (click)="clear()">Del</button>
+      <button class="opbtn" type="button" (click)="pressOperator('/')">/</button>
+     
+      <br>
+      <button class="numbutton" type="button" (click)="pressNum('7')">7</button>
+      <button class="numbutton" type="button" (click)="pressNum('8')">8</button>
+      <button class="numbutton" type="button" (click)="pressNum('9')">9</button>
+      <button class="opbtn" type="button" (click)="pressOperator('*')">X</button>
+      <br>
+      <button class="numbutton" type="button" (click)="pressNum('4')">4</button>
+      <button class="numbutton" type="button" (click)="pressNum('5')">5</button>
+      <button class="numbutton" type="button" (click)="pressNum('6')">6</button>
+      <button class="opbtn" type="button" (click)="pressOperator('-')">-</button>
+      <br>
+   
+      <button class="numbutton" type="button" (click)="pressNum('1')">1</button>
+      <button class="numbutton" type="button" (click)="pressNum('2')">2</button>
+      <button class="numbutton" type="button" (click)="pressNum('3')">3</button>
+      <button class="opbtn" type="button" (click)="pressOperator('+')">+</button>
+      <br>
+   
+      <button class="numbutton" type="button" (click)="pressNum('.')">.</button>
+       <button class="btnresult" type="button" (click)="getAnswer()">=</button>
+    </div>   
+</div>
+</body>
+</html>
